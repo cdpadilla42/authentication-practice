@@ -1,0 +1,22 @@
+<h1>Hello, world!</h1>
+<p>Welcome to {{title}}</p>
+
+{{#if currentUser}}
+  <h1>Welcome back {{currentUser.username}}!</h1>
+  <a href="/log-out">Log Out</a>
+{{else}}
+
+
+<h1>Please Log In</h1>
+<form action="/log-in" method="post">
+  <label for="username">Username:
+    <input type="text" name="username" id="">
+  </label>
+  <label for="password">
+    Password:
+    <input type="password" name="password" id="">
+  </label>
+  <input type="submit" value="Log In">
+</form>
+
+{{/if}}
